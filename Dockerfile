@@ -7,7 +7,11 @@ RUN echo "Instalando PHP7.4"
 RUN apt-get install -y php7.4
 RUN echo "Instalando Módulos do PHP"
 RUN apt-get install -y php-pear \
-                        php-fpm
+                        php-fpm \
+                        php-curl \
+                        php-xmlrpc \ 
+                        php-mbstring \
+                        php-xml
 RUN echo "Validando versão instalada"
 RUN php  -v
 
